@@ -15,6 +15,7 @@ ranks = {
     "BUILD TEAM": "BUILD TEAM",
     "HELPER": "HELPER",
     "MODERATOR": "MOD",
+    "GAME_MASTER": "GAME MASTER",
     "ADMIN": "ADMIN",
     "SLOTH": "SLOTH",
     "OWNER": "OWNER",
