@@ -28,7 +28,7 @@
   <a href="https://github.com/Obsidion-dev/asyncpixel/actions?workflow=Tests">
   <img src="https://github.com/Obsidion-dev/asyncpixel/workflows/Tests/badge.svg" alt="Test status" />
   </a>
-  <a href="https://discord.gg/rnAtymZnzH">
+  <a href="https://discord.gg/fWxtKFVmaW">
     <img alt="Discord" src="https://img.shields.io/discord/695008516590534758">
   </a href="#contributors-">
    <img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" alt="Code of conduct" />
