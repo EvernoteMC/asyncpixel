@@ -1,9 +1,9 @@
-"""Walls3."""
+"""Speed UHC"""
 from pydantic import BaseModel
 
 
-class Walls3(BaseModel):
-    """Walls3 games stats.
+class SpeedUHC(BaseModel):
+    """Speed UHC games stats.
 
     Args:
         coins (int): Number of coins gathered in this Game Mode. Defaults to 0.

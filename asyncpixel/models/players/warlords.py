@@ -1,42 +1,34 @@
-"""Duels."""
+"""Battleground."""
 from pydantic import BaseModel
 from pydantic import Field
 
 
-class Duels(BaseModel):
-    """Duels games stats.
+class Warlords(BaseModel):
+    """Battleground games stats.
 
     Args:
         coins (int): Number of coins gathered in this Game Mode. Defaults to 0.
-        current_winstreak (int): Current winstreak. Defaults to 0.
-        best_winstreak (int): Best winstreak. Defaults to 0.
-        games_played (int): Total number of games played. Defaults to 0.
         wins (int): Games won. Defaults to 0.
         losses (int): Games lost. Defaults to 0.
         kills (int): Number of kills. Defaults to 0.
+        assists (int): Number of assists. Defaults to 0.
         deaths (int): Number of deaths. Defaults to 0.
-        melee_swings (int): Number of melee swings. Defaults to 0.
-        melee_hits (int): Number of melee hits. Defaults to 0.
-        bow_shots (int): Number of bow shots. Defaults to 0.
-        bow_hits (int): Number of bow hits. Defaults to 0.
-        blocks_placed (int): Number of blocks placed. Defaults to 0.
         damage_dealt (int): Amount of damage dealt. Defaults to 0.
+        damage_taken (int): Amount of damage taken. Defaults to 0.
+        damage_prevented (int): Amount of damage prevented. Defaults to 0.
+        healed (int): Amount healed. Defaults to 0.
     """
 
     coins: int = 0
-    current_winstreak: int = 0
-    best_winstreak: int = Field(0, alias="best_overall_winstreak")
-    games_played: int = Field(0, alias="games_played_duels")
     wins: int = 0
     losses: int = 0
     kills: int = 0
+    assists: int = 0
     deaths: int = 0
-    melee_swings: int = 0
-    melee_hits: int = 0
-    bow_shots: int = 0
-    bow_hits: int = 0
-    blocks_placed: int = 0
-    damage_dealt: int = 0
+    damage_dealt: int = Field(0, alias="damage")
+    damage_taken: int = 0
+    damage_prevented: int = 0
+    healed: int = Field(0, alias="heal")
 
     @property
     def win_loss_ratio(self) -> float:

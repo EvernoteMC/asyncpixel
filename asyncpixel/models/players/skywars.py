@@ -3,8 +3,8 @@ from pydantic import BaseModel
 from pydantic import Field
 
 
-class Skywars(BaseModel):
-    """Skywars games stats.
+class SkyWars(BaseModel):
+    """SkyWars games stats.
 
     Args:
         coins (int): Number of coins gathered in this Game Mode. Defaults to 0.
