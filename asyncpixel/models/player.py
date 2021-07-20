@@ -16,26 +16,26 @@ from pydantic.types import UUID4
 
 from .game_type import GameType
 from .players import Arcade
-from .players import Arena
-from .players import Battleground
+from .players import ArenaBrawl
 from .players import Bedwars
+from .players import BlitzSurvivalGames
 from .players import BuildBattle
+from .players import CopsAndCrims
 from .players import Duels
-from .players import GingerBread
-from .players import Housing
-from .players import HungerGames
-from .players import Legacy
-from .players import MCGO
+from .players import MegaWalls
+from .players import MurderMystery
 from .players import Paintball
 from .players import Pit
-from .players import Quake
-from .players import SkyClash
-from .players import Skywars
+from .players import Quakecraft
+from .players import SkyWars
+from .players import SmashHeroes
+from .players import SpeedUHC
 from .players import TNTGames
+from .players import TurboKartRacers
 from .players import UHC
 from .players import VampireZ
 from .players import Walls
-from .players import Walls3
+from .players import Warlords
 from .utils import to_camel
 
 
@@ -43,54 +43,50 @@ class Stats(BaseModel):
     """Game Stats.
 
     Args:
-        bedwars (Optional[Bedwars]): bedwars stats.
         arcade (Optional[Arcade]): Arcade stats.
+        arena_brawl (Optional[ArenaBrawl]): Arena Brawl stats.
+        bedwars (Optional[Bedwars]): Bedwars stats.
+        blitz_survival_games (Optional[BlitzSurvivalGames]): Blitz Survival Games stats.
         build_battle (Optional[BuildBattle]): Build Battle stats.
+        cops_and_crims (Optional[CopsAndCrims]): Cops and Crims stats.
         duels (Optional[Duels]): Duels stats.
-        battleground (Optional[Battleground]): Battleground stats.
-        hunger_games (Optional[HungerGames]): Hunger Games stats.
-        ginger_bread (Optional[GingerBread]): Ginger Bread stats.
+        mega_walls (Optional[MegaWalls]): Mega Walls stats.
+        murder_mystery (Optional[MurderMystery]): Murder Mystery stats.
         paintball (Optional[Paintball]): Paintball stats.
-        quake (Optional[Quake]): Quake stats.
-        vampirez (Optional[VampireZ]): VampireZ stats.
-        tnt_games (Optional[TNTGames]): TNT Games stats.
-        uhc (Optional[UHC]): UHC stats.
-        mcgo (Optional[MCGO]): MCGO stats.
-        walls3 (Optional[Walls3]): Walls3 stats.
-        walls (Optional[Walls]): Walls stats.
-        arena (Optional[Arena]): Arena stats.
-        sky_clash (Optional[SkyClash]): SkyClash stats.
         pit (Optional[Pit]): Pit stats.
-        housing (Optional[Housing]): Housing stats.
-        legacy (Optional[Legacy]): Legacy stats.
+        quakecraft (Optional[Quake]): Quakecraft stats.
+        skywars (Optional[SkyWars]): SkyWars stats.
+        smash_heroes (Optional[SmashHeroes]): Smash Heroes stats.
+        speed_uhc (Optional[SpeedUHC]): Speed UHC stats.
+        tnt_games (Optional[TNTGames]): TNT Games stats.
+        turbo_kart_racers (Optional[TurboKartRacers]): Turbo Kart Racers stats.
+        uhc (Optional[UHC]): UHC stats.
+        vampirez (Optional[VampireZ]): VampireZ stats.
+        walls (Optional[Walls]): Walls stats.
+        warlords (Optional[Warlords]): Warlords stats.
     """
 
-    bedwars: Optional[Bedwars] = Field(alias="Bedwars")
     arcade: Optional[Arcade] = Field(alias="Arcade")
+    arena_brawl: Optional[ArenaBrawl] = Field(alias="Arena")
+    bedwars: Optional[Bedwars] = Field(alias="Bedwars")
+    blitz_survival_games: Optional[BlitzSurvivalGames] = Field(alias="HungerGames")
     build_battle: Optional[BuildBattle] = Field(alias="BuildBattle")
+    cops_and_crims: Optional[CopsAndCrims] = Field(alias="MCGO")
     duels: Optional[Duels] = Field(alias="Duels")
-    battleground: Optional[Battleground] = Field(alias="Battleground")
-    hunger_games: Optional[HungerGames] = Field(alias="HungerGames")
-    ginger_bread: Optional[GingerBread] = Field(alias="GingerBread")
+    mega_walls: Optional[MegaWalls] = Field(alias="Walls3")
+    murder_mystery: Optional[MurderMystery] = Field(alias="MurderMystery")
     paintball: Optional[Paintball] = Field(alias="Paintball")
-    quake: Optional[Quake] = Field(alias="Quake")
-    vampirez: Optional[VampireZ] = Field(alias="VampireZ")
-    tnt_games: Optional[TNTGames] = Field(alias="TNTGames")
-    uhc: Optional[UHC] = Field(alias="UHC")
-    mcgo: Optional[MCGO] = Field(alias="MCGO")
-    walls3: Optional[Walls3] = Field(alias="Walls3")
-    walls: Optional[Walls] = Field(alias="Walls")
-    arena: Optional[Arena] = Field(alias="Arena")
-    sky_clash: Optional[SkyClash] = Field(alias="SkyClash")
     pit: Optional[Pit] = Field(alias="Pit")
-    housing: Optional[Housing] = Field(alias="Housing")
-    legacy: Optional[Legacy] = Field(alias="Legacy")
-    skywars: Optional[Skywars] = Field(alias="SkyWars")
-
-    # true_combat: Optional[TrueCombat] = Field(alias="TrueCombat")
-    # speed_uhc: Optional[SpeedUHC]= Field(alias="SpeedUHC")
-    # sky_block: Optional[SkyBlock]= Field(alias="SkyBlock")
-    # super_smash: Optional[SuperSmash] = Field(alias="SuperSmash")
+    quakecraft: Optional[Quakecraft] = Field(alias="Quakecraft")
+    skywars: Optional[SkyWars] = Field(alias="SkyWars")
+    smash_heroes: Optional[SmashHeroes] = Field(alias="SuperSmash")
+    speed_uhc: Optional[SpeedUHC] = Field(alias="SpeedUHC")
+    tnt_games: Optional[TNTGames] = Field(alias="TNTGames")
+    turbo_kart_racers: Optional[TurboKartRacers] = Field(alias="GingerBread")
+    uhc: Optional[UHC] = Field(alias="UHC")
+    vampirez: Optional[VampireZ] = Field(alias="VampireZ")
+    walls: Optional[Walls] = Field(alias="Walls")
+    warlords: Optional[Warlords] = Field(alias="Battleground")
 
 
 class Social(BaseModel):
